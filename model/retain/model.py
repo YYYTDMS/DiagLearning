@@ -106,7 +106,7 @@ class RETAIN(nn.Module):
 
         self.fc = nn.Linear(len(self.feature_keys) * self.embedding_dim, output_size)
         self.device = device
-        # 建议你放在类初始化中设置路径一次
+
         self.visit_emb_save_path = './visit_embeddings'
         os.makedirs(self.visit_emb_save_path, exist_ok=True)
         self.ccs_emb_dict = {}
